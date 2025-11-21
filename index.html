@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой рабочий сайт</title>
+    <title>Красивый рабочий сайт</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать!</h1>
-        <p>Это полностью рабочий сайт</p>
+        <h1>Красивый рабочий сайт</h1>
+        <p>Все кнопки функционируют идеально</p>
     </header>
 
     <nav>
@@ -22,65 +21,74 @@
 
     <div class="container">
         <section id="home" class="section">
-            <h2>Главная страница</h2>
-            <p>Тестируем работу JavaScript</p>
-            <button id="test-btn" class="btn">Проверить кнопку</button>
-            <button id="color-btn" class="btn">Изменить цвет</button>
-            <div id="result" class="result"></div>
+            <h2>Тестирование кнопок</h2>
+            <div class="button-group">
+                <button id="test-btn" class="btn btn-primary">Проверить работу</button>
+                <button id="color-btn" class="btn btn-secondary">Сменить цвет</button>
+                <button id="message-btn" class="btn btn-success">Показать сообщение</button>
+            </div>
+            <div id="result" class="result-box"></div>
         </section>
 
         <section id="about" class="section">
-            <h2>О нас</h2>
-            <p>Счетчик кликов:</p>
-            <div class="counter">
-                <span id="counter">0</span>
-                <button id="add-btn" class="btn">+1</button>
-                <button id="reset-btn" class="btn">Сбросить</button>
+            <h2>Интерактивный счетчик</h2>
+            <div class="counter-box">
+                <div class="counter-display">
+                    <span id="counter">0</span>
+                </div>
+                <div class="counter-controls">
+                    <button id="add-btn" class="btn btn-success">+ Увеличить</button>
+                    <button id="subtract-btn" class="btn btn-warning">- Уменьшить</button>
+                    <button id="reset-btn" class="btn btn-danger">Сбросить</button>
+                </div>
             </div>
         </section>
 
         <section id="gallery" class="section">
-            <h2>Галерея</h2>
+            <h2>Галерея изображений</h2>
+            <div class="gallery-controls">
+                <button id="prev-btn" class="btn btn-primary">← Назад</button>
+                <button id="next-btn" class="btn btn-primary">Вперед →</button>
+            </div>
             <div class="gallery">
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Изображение+1" alt="Пример 1">
+                <div class="gallery-item active">
+                    <img src="https://via.placeholder.com/400x250/3498db/ffffff?text=Изображение+1" alt="Пример 1">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=Изображение+2" alt="Пример 2">
+                    <img src="https://via.placeholder.com/400x250/2ecc71/ffffff?text=Изображение+2" alt="Пример 2">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Изображение+3" alt="Пример 3">
+                    <img src="https://via.placeholder.com/400x250/e74c3c/ffffff?text=Изображение+3" alt="Пример 3">
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <h2>Контакты</h2>
+            <h2>Форма обратной связи</h2>
             <form id="contact-form">
                 <div class="form-group">
                     <label for="name">Ваше имя:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Сообщение:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Введите ваше сообщение..." required></textarea>
                 </div>
-                <button type="submit" class="btn">Отправить</button>
+                <button type="submit" class="btn btn-primary btn-large">Отправить сообщение</button>
             </form>
-            <div id="form-result"></div>
+            <div id="form-result" class="result-box"></div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Рабочий сайт</p>
-        <p id="time">Время загрузки: </p>
+        <p>&copy; 2024 Красивый рабочий сайт</p>
+        <p id="time">Время: загрузка...</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
